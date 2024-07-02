@@ -6,6 +6,6 @@ def clear_console():
 
 clear_console()
 
-opposite_side = int(input('Comprimento do cateto oposto: '))
-adjacent_side = int(input('Comprimento do cateto adjacente: '))
+opposite_side = float(input('Comprimento do cateto oposto: '))
+adjacent_side = float(input('Comprimento do cateto adjacente: '))
 print('A hipotenusa vai medir {:.2f}'.format(hypot(opposite_side, adjacent_side	)))
