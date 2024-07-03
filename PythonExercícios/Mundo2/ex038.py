@@ -5,7 +5,7 @@ def clear_console():
 
 clear_console()
 
-def scren():
+def menu():
     print('\033[1;33;40m-=\033[m' * 30)
     print('\033[1;34;40mCOMPARADOR DE NÚMEROS\033[m')
     print('\033[1;33;40m-=\033[m' * 30)
@@ -23,4 +23,4 @@ def number_comparator(number_one, number_two):
     else:
         print(f'\nOs números {number_one} e {number_two} são iguais'.upper())
 
-scren()
+menu()

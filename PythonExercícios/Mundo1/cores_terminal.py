@@ -12,5 +12,5 @@
 #                       39 = Light Red          49 = Light Red
 
 # \033[0:33:44m               Padrão para cores
-print('\033[0;31;40mOlá, Mundo!\033[m')
+
 

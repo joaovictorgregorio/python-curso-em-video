@@ -6,7 +6,7 @@ def clear_console():
 clear_console()
 
 
-def scren():
+def menu():
     print('\033[1;37;40m+-\033[m' * 25)
     print('\033[1;31;40mSISTEMA DE APROVAÇÃO\033[m \033[1;37;40mPARA O PRÓXIMO ANO\033[m')
     print('\033[1;31;40m+-\033[m' * 25)
@@ -22,8 +22,8 @@ def average(note_one, note_two):
     if average < 5.0:
         print(f'\nSua média foi de {average:.1f} e você está \033[1;31;40mREPROVADO\033[m.')
     elif average >= 5.0 and average <= 6.9:
-        print(f'\nSua média foi de {average:.1f} e você está \033[1;33;40mRECUPERAÇÃO\033[m.')
+        print(f'\nSua média foi de {average:.1f} e você está em \033[1;33;40mRECUPERAÇÃO\033[m.')
     else:
-        print(f'\nSua média foi de {average:.1f} e você está de \033[1;32;40mAPROVADO\033[m.')
+        print(f'\nSua média foi de {average:.1f} e você está \033[1;32;40mAPROVADO\033[m.')
 
-scren()
+menu()
