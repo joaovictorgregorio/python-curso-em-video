@@ -20,6 +20,7 @@ def countdown():
         print(i)
         sleep(1)
         clear_console()
+    
     print('\033[1;31;40mPreparar\033[m')
     sleep(1)
     print('\033[1;33;40mAcionar\033[m')
