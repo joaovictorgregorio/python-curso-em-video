@@ -32,7 +32,7 @@ def pa(first_term, reason):
     
     print('\033[1;32mPAUSA\033[m')
     
-    more = int(input('Quantos termos você quer mostrar a mais? '))
+    more = int(input('\nQuantos termos você quer mostrar a mais? '))
    
     while more != 0:
         count = 1
@@ -41,7 +41,7 @@ def pa(first_term, reason):
             term += reason
             count += 1
         print('\033[1;32mPAUSA\033[m')
-        more = int(input('Quantos termos você quer mostrar a mais? '))
+        more = int(input('\nQuantos termos você quer mostrar a mais? '))
     print('\033[1;32mFIM\033[m')
 
 
