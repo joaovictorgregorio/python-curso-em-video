@@ -1,6 +1,6 @@
 from os import system
 from time import sleep
-from crayons import blue, red
+from crayons import blue, red, yellow
 
 logo = """\033[1;34m                                                                 
  _____         _ _              _          _       _              _                            
@@ -48,8 +48,8 @@ def register_people():
     while True:
         continue_register = input("Quer continuar? [S/N] ").strip().upper()
         if continue_register == "N":
+            print(yellow("\nFinalizando...".upper(), bold=True))
             sleep(1)
-            print(blue("\nFinalizando...".upper(), bold=True))
             print(f"Total de pessoas com mais de 18 anos: {len(people_over_18_years_old)}")
             print(f"Ao todo temos {len(amount_of_men)} homens cadastrados.")
             if len(women_under_20) == 0:

@@ -1,7 +1,7 @@
 from os import system
 from time import sleep
 from random import randint
-from crayons import red, green, magenta
+from crayons import red, green, magenta, yellow
 
 logo = """\033[1;35m
    ___                            _____                            
@@ -27,10 +27,13 @@ def odd_or_even_game():
     rounds_won = 0
     while True:
         player_number = int(input("\nDigite um número: "))
-        player_choice = input("Par ou Impar? [P/I] ").strip().upper()[0]
+        player_choice = ' '
+        while player_choice not in "PI":
+            player_choice = input("Par ou Impar? [P/I] ").strip().upper()[0]
         computer_number = randint(0, 10)
         result = player_number + computer_number
-        print(f"\nVocê jogou {player_number} e o computador {computer_number}. Total de {result}")
+        print(f"\nVocê jogou {player_number} e o computador {computer_number}. Total de {result}", end=" ")
+        print(yellow("DEU PAR" if result % 2 == 0 else "DEU ÍMPAR"))
         if result % 2 == 0 and player_choice == "P":
             print(green("Você venceu!".upper()))
             rounds_won += 1
@@ -42,7 +45,12 @@ def odd_or_even_game():
         else:
             print(red("Você perdeu!".upper()))
             break
-    print(f"\nVocê venceu {rounds_won} rodadas consecutivas!")
+    if rounds_won == 0:
+        print(red("\nVocê não venceu nenhuma rodada.", bold=True))
+    elif rounds_won == 1:
+        print(yellow("\nVocê venceu apenas uma rodada.", bold=True))
+    else:
+        print(f"\nVocê venceu {rounds_won} rodadas consecutivas!")
 
 
 screen()

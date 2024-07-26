@@ -54,9 +54,8 @@ def register_purchased_products():
     while True:
         continue_register = input("Quer continuar? [S/N] ").strip().upper()
         if continue_register == "N":
-            sleep(1)
             print(cyan("\nFinalizando...".upper(), bold=True))
-            sleep(0.5)
+            sleep(1)
             print(f"Total da compra foi R${sum(total_purchased):.2f}")
             if len(products_over_one_thousand) == 0:
                 print("Não tem produtos custando mais de R$1000.00")
