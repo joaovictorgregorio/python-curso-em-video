@@ -31,4 +31,3 @@ print(green("\nA comida estava muito boa!!!"))
 
 # print(sorted(lanche))
 # print(lanche)
-
