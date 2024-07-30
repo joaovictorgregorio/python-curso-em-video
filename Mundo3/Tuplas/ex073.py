@@ -25,14 +25,18 @@ current_list_of_2024_Brasileirao = ('Botafogo', 'Flamengo', 'Palmeiras',
                                     'Fluminense', 'Grêmio', 'Atlético-GO ',)
 
 sleep(0.5)
-print(f"\nLista de times do Brasileirão: {(current_list_of_2024_Brasileirao)}")
+print("\nLista de times Brasileirão 2024:")
+for position, team in enumerate(current_list_of_2024_Brasileirao):
+    print(f"{yellow(position+1, bold=True)}ª {team}")
+
 sleep(0.5)
-print(f"\nOs 5 primeiros são: {green(current_list_of_2024_Brasileirao[:5])}")
+print("\nOs 5 primeiros são: ", end="")
+print(f"{green(current_list_of_2024_Brasileirao[:5], bold=True)}")
 sleep(0.5)
-print(f"\nOs 4 últimos são {red(current_list_of_2024_Brasileirao[-4:])}")
+print("\nOs 4 últimos são: ", end="")
+print(f"{red(current_list_of_2024_Brasileirao[-4:], bold=True)}")
 sleep(0.5)
 print(f"\nTimes em ordem alfabética: {sorted(current_list_of_2024_Brasileirao)}")
 sleep(0.5)
-for position, team in enumerate(current_list_of_2024_Brasileirao):
-    if team == "Corinthians":
-        print(f"\nA Corinthians está na {yellow(position+1)}ª posição")
+print("\nO Corinthians está na ", end="")
+print(f"{current_list_of_2024_Brasileirao.index('Corinthians')+1}ª posição")

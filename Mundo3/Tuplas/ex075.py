@@ -26,7 +26,8 @@ for count in range(0, 4):
         number4 = int(input("Digite o último número: "))
 
 values_entered = (number1, number2, number3, number4)
-print(f"\nVocê digitou os valores: {blue(values_entered, bold=True)}")
+
+print(f"\nVocê digitou os valores: {yellow(values_entered)}")
 print(f"O valor 9 apareceu {values_entered.count(9)} vezes")
 print(f"O valor 3 apareceu na {values_entered.index(3)+1}ª posição" if 3
       in values_entered else "O valor 3 não foi digitado em nenhuma posição")

@@ -20,8 +20,10 @@ random_number_tuple = (randint(0, 10), randint(0, 10), randint(0, 10),
                        randint(0, 10), randint(0, 10))
 
 sleep(0.5)
-print(f"\nOs valores sorteados foram: {random_number_tuple}")
+print("\nOs valores sorteados foram: ", end="")
+for number in random_number_tuple:
+    print(f"{yellow(number, bold=True)}", end=" ")
 sleep(0.5)
-print(f"\nO maior valor sorteado foi {max(random_number_tuple)}")
+print(f"\n\nO maior valor sorteado foi {max(random_number_tuple)}")
 sleep(0.5)
 print(f"O menor valor sorteado foi {min(random_number_tuple)}")

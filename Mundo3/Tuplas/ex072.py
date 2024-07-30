@@ -13,17 +13,39 @@ logo = cyan("""
 """)
 
 
-system("cls")
-print(logo)
-sleep(0.5)
-print(yellow("Bem vindo....\n".upper(), bold=True))
+def screen():
+    system("cls")
+    print(logo)
+    sleep(0.5)
+    print(yellow("Bem vindo....\n".upper(), bold=True))
+    analyze_number()
 
-numbers_in_full = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco',
-                   'seis', 'sete', 'oito', 'nove', 'dez',
-                   'onze', 'doze', 'treze', 'quatorze', 'quinze',
-                   'dezesseis', 'dezesete', 'dezeoito', 'dezenove', 'vinte')
 
-number = int(input("Digite um número entre 0 e 20: "))
-while number < 0 or number > 20:
-    number = int(input("Tente novamente. Digite um número entre 0 e 20: "))    
-print(f"Você digitou o número {cyan(numbers_in_full[number].capitalize())}")
+def analyze_number():
+    numbers_in_full = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco',
+                       'seis', 'sete', 'oito', 'nove', 'dez',
+                       'onze', 'doze', 'treze', 'quatorze', 'quinze',
+                       'dezesseis', 'dezesete', 'dezeoito', 'dezenove', 'vinte')
+
+    while True:
+        number = int(input("Digite um número entre 0 e 20: "))
+        if 0 <= number <= 20:
+            break
+        print(yellow("Tente novamente. "), end=" ")
+    print(f"\nVocê digitou o número {cyan(numbers_in_full[number].capitalize())}")
+    continue_analyzing()
+
+
+def continue_analyzing():
+    while True:
+        continue_analyzing = input("Quer continuar? [S/N] ").strip().upper()[0]
+        if continue_analyzing == "S":
+            analyze_number()
+        elif continue_analyzing == "N":
+            sleep(0.5)
+            print(cyan("\nFinalizado. Obrigado até a próxima!!!".upper()))
+            exit()
+        print(red("Resposta inválida. Tente novamente. ", bold=True), end="")
+
+
+screen()
