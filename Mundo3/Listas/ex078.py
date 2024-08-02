@@ -16,12 +16,13 @@ values = list() # Lista vazia
 for position in range(0, 5):
     values.append(int(input(f"Digite um valor para a posição {red(position + 1)}: ")))
 
+time.sleep(1)
 print(f"\nVocê digitou os valores: {blue(values, bold=True)}")
 
 """Imprimindo o maior valor e sua posição"""
 print(f"O maior valor é {max(values)} e está na posição: ", end="")
-print(f"{red(values.index(max(values))+1, bold=True)}")
+print(f"{red(values.index(max(values))+1, bold=True)}ª")
 
 """Imprimindo o menor valor e sua posição"""
 print(f"O menor valor é {min(values)} e está na posição: ", end="")
-print(f"{red(values.index(min(values))+1, bold=True)}")
+print(f"{red(values.index(min(values))+1, bold=True)}ª")
