@@ -13,8 +13,9 @@ os.system("cls")
 print(logo)
 
 values = list() # Lista vazia
+"""Leitura de valores digitados pelo usuário, adicionando na lista vazia"""
 for position in range(0, 5):
-    values.append(int(input(f"Digite um valor para a posição {red(position + 1)}: ")))
+    values.append(int(input(f"Digite um valor para a posição {(position + 1)}ª: ")))
 
 time.sleep(1)
 print(f"\nVocê digitou os valores: {blue(values, bold=True)}")
