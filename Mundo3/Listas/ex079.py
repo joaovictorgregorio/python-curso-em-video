@@ -18,7 +18,7 @@ while True:
     value = int(input("Digite um valor: "))
     if value < 0:
         print(red("Valor inválido! Digite um valor positivo.", bold=True))
-        time.sleep(1.5)
+        time.sleep(2)
         print("\033[F\033[K")
     else:
         if value not in user_values:
@@ -26,7 +26,7 @@ while True:
             user_values.append(value)
         else:
             print(yellow("Valor duplicado! Não vou adicionar..."))
-        time.sleep(1.5)
+        time.sleep(2)
         print("\033[F\033[K")
     
     while True:
@@ -40,5 +40,5 @@ while True:
             exit()
         else:
             print(red("Opção inválida! Tente novamente.", bold=True))
-            time.sleep(1.5)
+            time.sleep(2)
             print("\033[F\033[K")
