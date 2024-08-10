@@ -26,10 +26,7 @@ if worker['ctps'] != 0:
 else:
     worker['ctps'] = 0
 
-print("-=" * 30)
-print(worker)
-print("-=" * 30)
-
+print("\n")
 for key, value in worker.items():
     time.sleep(0.5)
-    print(f"{cyan(key, bold=True)} tem o valor {yellow(value, bold=True)}")
+    print(f" -- {cyan(key, bold=True)} tem o valor {yellow(value, bold=True)}")
