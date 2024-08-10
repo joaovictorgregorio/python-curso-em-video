@@ -31,4 +31,5 @@ print(worker)
 print("-=" * 30)
 
 for key, value in worker.items():
+    time.sleep(0.5)
     print(f"{cyan(key, bold=True)} tem o valor {yellow(value, bold=True)}")

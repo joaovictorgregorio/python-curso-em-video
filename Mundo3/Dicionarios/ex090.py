@@ -16,12 +16,16 @@ print(logo)
 
 student = dict()
 
-student['name'] = input("Nome: ")
-student['media'] = float(input(f"Média de {student['name']}: "))
-
-print(f"\nNome é igual a {yellow(student['name'], bold=True)}")
-print(f"Média é igual a {blue(student['media'], bold=True)}")
+student['nome'] = input("Nome: ")
+student['media'] = float(input(f"Média de {student['nome']}: "))
 if student['media'] >= 7:
-    print(f"Situação é igual a {green('Aprovado', bold=True)}")
+    student['situacao'] = green("Aprovado(a)", bold=True)
+elif 5 <= student['media'] < 7:
+    student['situacao'] = yellow("Recuperação", bold=True)
 else:
-    print(f"Situação é igual a {red('Reprovado', bold=True)}")
+    student['situacao'] = red("Reprovado(a)", bold=True)
+
+print(yellow("\n" + "-=" * 20))
+for key, value in student.items():
+    time.sleep(0.3)
+    print(f"  -- {key.capitalize()} é igual a {value}")
