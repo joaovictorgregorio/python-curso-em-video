@@ -14,16 +14,38 @@ logo = green("""
 os.system("cls")
 print(logo)
 
+
 def contador():
     print(yellow("Contagem de 1 até 10, de 1 em 1: ", bold=True))
-    for i in range(11):
+    for i in range(10):
         time.sleep(0.2)
-        print(i, end=" ")
+        print(i+1, end=" ")
+    print(yellow("FIM...", bold=True))
 
-    print(cyan("\nContagem de 10 até  0, de 2 em 2:"))
+    print(cyan("\n\nContagem de 10 até  0, de 2 em 2:", bold=True))
     for i in range(10, -1, -2):
         time.sleep(0.2)
         print(i, end=" ")
+    print(cyan("FIM...", bold=True))
+
+    print(magenta("\n\nAgora é a sua vez de personalizar a contagem!", bold=True))
+    inicio = int(input("Início: "))
+    fim = int(input("Fim: "))
+    passo = abs(int(input("Passo: ")))
+
+    if passo == 0:
+        passo = 1
+
+    print("\n" + "*" * 45)
+    print(f"Contagem de {inicio} até {fim} de {passo} em {passo}")
+    for i in range(inicio, fim + 1, passo):
+        time.sleep(0.2)
+        print(i, end=" ")
+    if inicio > fim:
+        for i in range(inicio, fim - 1, -passo):
+            time.sleep(0.2)
+            print(i, end=" ")
+    print(magenta("FIM...", bold=True))
 
 
 contador()
