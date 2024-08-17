@@ -17,21 +17,23 @@ print(logo)
 def sorteia():
     numeros = random.sample(range(1, 10), 5)
 
-    print("Sorteando 5 valores da lista: ", end="")
+    print("Sorteando 5 valores da lista: ", end="", flush=True)
+    time.sleep(1)
     for numero in numeros:
-        print(f"{numero}", end=" ")
+        print(f"{numero}", end=" ", flush=True)
+        time.sleep(0.3)
     print("PRONTO...")
     somaPar(numeros)
 
 
 def somaPar(numeros):
-    print(f"\nSomando os valores pares de {numeros}, ", end="")
+    print(f"\nSomando os valores pares de {numeros}, ", end="", flush=True)
     soma = 0
     for numero in numeros:
         if numero % 2 == 0:
             soma += numero
+    time.sleep(1)
     print(f"temos {soma}")
-
 
 
 sorteia()
