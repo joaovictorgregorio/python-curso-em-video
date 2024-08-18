@@ -22,18 +22,18 @@ def sorteia():
     for numero in numeros:
         print(f"{numero}", end=" ", flush=True)
         time.sleep(0.3)
-    print("PRONTO...")
+    print(yellow("\nPRONTO...", bold=True))
     somaPar(numeros)
 
 
 def somaPar(numeros):
-    print(f"\nSomando os valores pares de {numeros}, ", end="", flush=True)
+    print(f"\nSomando os valores pares de {numeros} ", end="", flush=True)
     soma = 0
     for numero in numeros:
         if numero % 2 == 0:
             soma += numero
     time.sleep(1)
-    print(f"temos {soma}")
+    print(yellow(f"\nTEMOS {soma}", bold=True))
 
 
 sorteia()
