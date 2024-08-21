@@ -23,10 +23,14 @@ def ficha(nome="", gols=""):
     """
     if nome == "":
         nome = yellow("<desconhecido>", bold=True)
+    if gols.isnumeric():
+        gols = int(gols)
+    else:
+        gols = 0
     return f"\nO jogador {yellow(nome, bold=True)} fez {gols} gol(s) no campeonato."
 
 
 nome_jogador = str(input("Nome do Jogador: ")).strip().title()
-quantidade_gols = int(input("Número de gols: "))
+quantidade_gols = str(input("Número de gols: "))
 sleep(0.5)
 print(ficha(nome_jogador, quantidade_gols))

@@ -34,4 +34,4 @@ def fatorial(valor, show=False):
     return fatorial
 
 
-print(fatorial(7, True))
+print(fatorial(5, True))
