@@ -1,6 +1,5 @@
 import os
 from crayons import red, green, blue, yellow, cyan, magenta
-from time import sleep
 
 logo = yellow("""
  _____                   _          _ _     _                 _         
@@ -27,14 +26,14 @@ def notas(*notas, situacao=False):
     analise["media"] = sum(notas) / len(notas)
     if situacao:
         if analise["media"] >= 7:
-            analise["situacao"] = "boa".upper()
+            analise["situacao"] = "BOA"
         elif analise["media"] >= 5:
-            analise["situacao"] = "razoável".upper()
+            analise["situacao"] = "RAZOÁVEL"
         else:
-            analise["situacao"] = "ruim".upper()
+            analise["situacao"] = "RUIM"
     return analise
 
 
-resposta = notas(3.5, 2, 6.5, 7, 4, 8, situacao=True) 
+resposta = notas(5.5, 2.5, 3.5, situacao=True)
 print(resposta)
 help(notas)
