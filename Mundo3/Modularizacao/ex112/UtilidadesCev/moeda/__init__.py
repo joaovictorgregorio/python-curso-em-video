@@ -1,4 +1,5 @@
 def resumo(preco, aumento, reducao):
+    from crayons import yellow
     """
     --> Retorna um resumo do valor
     :param preco: valor a ser calculado
@@ -6,9 +7,10 @@ def resumo(preco, aumento, reducao):
     :param reducao: porcentagem da redução
     :return: resumo do valor
     """
-    print("-" * 35)
+    print("\n")
+    print(yellow("-" * 35))
     print("RESUMO DO VALOR".center(35))
-    print("-" * 35)
+    print(yellow("-" * 35))
     print(f"Preço analisado: \t{moeda(preco)}")
     print(f"Dobro do preço: \t{dobro_valor(preco, True)}")
     print(f"Metade do preço: \t{metade_valor(preco, True)}")

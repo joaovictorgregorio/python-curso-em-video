@@ -9,4 +9,3 @@ def leiaDinheiro(preco):
             print(red("ERRO: este campo não pode ficar vazio!", bold=True))
         else:
             return float(valor)
-
