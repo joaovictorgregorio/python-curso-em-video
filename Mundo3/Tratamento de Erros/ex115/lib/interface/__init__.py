@@ -31,6 +31,10 @@ def leiaInt(numero):
             return 0
 
 
+def cabecalho(texto):
+    print(texto.center(42))
+
+
 def menu(lista):
     """
     Função para mostrar o menu
@@ -39,6 +43,6 @@ def menu(lista):
     """
     for i, v in enumerate(lista):
         print(f"{blue(i+1, bold=True)} - {v}")
-    
+
     opcao = leiaInt("\nEscolha uma opção: ")
     return opcao
